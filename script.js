@@ -119,6 +119,36 @@ function showSection(section) {
         }
       }
     }
+      function modExp(base, exp, mod) {
+  let result = 1;
+  base = base % mod;
+  while (exp > 0) {
+    if (exp % 2 === 1) result = (result * base) % mod;
+    exp = Math.floor(exp / 2);
+    base = (base * base) % mod;
+  }
+  return result;
+}
+      function encryptText() {
+  let msg = document.getElementById("message").value;
+  let e = parseInt(document.getElementById("key").value);
+  let n = parseInt(document.getElementById("n").value);
+  if (!msg || isNaN(e) || isNaN(n)) {
+    document.getElementById("output").innerHTML = "Please fill all fields.";
+    return;
+  }
+
+  let encrypted = [];
+  for (let i = 0; i < msg.length; i++) {
+    let code = msg.charCodeAt(i);
+    let enc = modExp(code, e, n);
+    encrypted.push(enc);
+  }
+
+  document.getElementById("output").innerHTML = `Encrypted: ${encrypted.join(" ")}`;
+}
+
+
 
     output += `<br><strong>Result: ${allPairsRelativelyPrime ? "Yes, Pairwise Relatively Prime" : "No, Not Pairwise Relatively Prime"}</strong>`;
     document.getElementById("output").innerHTML = output;
