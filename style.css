@@ -16,27 +16,24 @@ body {
     max-width: 600px;
     margin: auto;
     border-radius: 20px;
-    border-color:#256033 ;
+    border-color: #256033 ;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .buttons {
     margin-bottom: 20px;
-
 }
 
 button {
     padding: 10px 20px;
     margin: 20px;
     border: none;
-    
     border-radius: 50px;
     background-color: #256033;
     color: white;
     cursor: pointer;
-
 }
+
 textarea {
   padding: 10px;
   margin: 5px;
@@ -45,21 +42,19 @@ textarea {
   resize: vertical;
 }
 
-
 input {
     padding: 10px;
-    color:#256033;
+    color: #256033;
     text-align: center;
     margin: 10px;
     width: 200px;
-    border-radius:20px ;
-    border-color:#00ff3c ;
+    border-radius: 20px;
+    border-color: #00ff3c;
 }
 
 .result {
     margin-top: 20px;
 }
-
 
 .footer {
     color: white;
@@ -72,7 +67,8 @@ input {
     bottom: 0;
     text-align: center;
 }
-.footer a{
-    text-decoration:underline;
+
+.footer a {
+    text-decoration: underline;
     color: rgb(133, 147, 219);
 }
